@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Maratón de Programación</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Maratón de Programación</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginAdminModal">Login
+                            admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registroAdminModal">Crear
+                            admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#registroGrupoModal">Registrar estudiante</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Bienvenido</h1>
+        <p>Esta es la página de inicio</p>
+    </div>
+
+    <div class="modal fade" id="registroAdminModal" tabindex="-1" aria-labelledby="registroAdminModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroAdminModalLabel">Registro de Administrador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmCrearAdmin">
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="claveInput" class="form-label">Clave</label>
+                            <input type="password" class="form-control" id="claveInput" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div class="modal fade" id="loginAdminModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmLoginAdmin">
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="inputEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label">Clave</label>
+                            <input type="password" class="form-control" id="inputPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registroGrupoModal" tabindex="-1" aria-labelledby="registroGrupoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registroGrupoModalLabel">Registro de Grupo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="frmCrearGrupo">
+                        <div class="mb-3">
+                            <label for="nombreGrupo" class="form-label">Nombre del Grupo</label>
+                            <input type="text" class="form-control" id="nombreGrupo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoriaGrupo" class="form-label">Categoría del Grupo</label>
+                            <select class="form-select" id="categoriaGrupo" required>
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="maratonGrupo" class="form-label">Maratón</label>
+                            <select class="form-select" id="maratonGrupo" required>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreEstudiante1" class="form-label">Nombre del Estudiante Líder</label>
+                            <input type="text" class="form-control" id="nombreEstudiante1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carnetEstudiante1" class="form-label">Carnet del Estudiante Líder</label>
+                            <input type="text" class="form-control" id="carnetEstudiante1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correoEstudiante1" class="form-label">Correo del Estudiante Líder</label>
+                            <input type="email" class="form-control" id="correoEstudiante1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cursosEstudiante1" class="form-label">Cursos del Primer Estudiante</label>
+                            <select class="form-select" id="cursosEstudiante1" multiple required>
+
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nombreEstudiante2" class="form-label">Nombre del segundo Estudiante</label>
+                            <input type="text" class="form-control" id="nombreEstudiante2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carnetEstudiante2" class="form-label">Carnet del segundo Estudiante</label>
+                            <input type="text" class="form-control" id="carnetEstudiante2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correoEstudiante2" class="form-label">Correo del segundo Estudiante</label>
+                            <input type="email" class="form-control" id="correoEstudiante2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cursosEstudiante2" class="form-label">Cursos del segundo Estudiante</label>
+                            <select class="form-select" id="cursosEstudiante2" multiple required>
+
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nombreEstudiante3" class="form-label">Nombre del tercer Estudiante</label>
+                            <input type="text" class="form-control" id="nombreEstudiante3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carnetEstudiante3" class="form-label">Carnet del tercer Estudiante</label>
+                            <input type="text" class="form-control" id="carnetEstudiante3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correoEstudiante3" class="form-label">Correo del tercer Estudiante</label>
+                            <input type="email" class="form-control" id="correoEstudiante3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cursosEstudiante3" class="form-label">Cursos del segundo Estudiante</label>
+                            <select class="form-select" id="cursosEstudiante3" multiple required>
+
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Crear Grupo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer bg-dark text-white text-center py-3 fixed-bottom">
+        <div class="container">
+            <span>&copy; 2023 Maratón de Programación.</span>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(() => {
+            window.API_URL_LOGIN = 'http://localhost:5000';
+
+            $('#frmCrearAdmin').submit(crearAdmin);
+            $('#frmLoginAdmin').submit(loginAdmin);
+            $('#frmCrearGrupo').submit(crearGrupo);
+
+            cargarCategorias();
+            cargarMaratones();
+            cargaCursos();
+        });
+
+        function crearAdmin(event) {
+            event.preventDefault();
+            const email = $('#emailInput').val();
+            const clave = $('#claveInput').val();
+
+            var settings = {
+                "url": "http://localhost:5000/usuario",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    email,
+                    clave,
+                    rol_id: 1
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                if (response.mensaje == 'Usuario creado con éxito') {
+                    alert('Usuario creado con éxito');
+                    $('#registroAdminModal').modal('hide');
+                } else {
+                    alert('Error al crear el usuario. Intente nuevamente.');
+                }
+            });
+        }
+
+        function loginAdmin(event) {
+            event.preventDefault();
+
+            const email = $('#inputEmail').val();
+            const clave = $('#inputPassword').val();
+
+            var settings = {
+                "url": "http://localhost:5000/login",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    email,
+                    clave
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                if (response.mensaje == 'OK') {
+                    // redireccionar a la página de administrador:
+                    window.location.href = 'admin.html';
+                } else {
+                    alert('Error al autenticar el usuario. Intente nuevamente.');
+                }
+            });
+        }
+
+        function cargarCategorias() {
+            var settings = {
+                "url": "http://localhost:8081/categoria",
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                for (const categoria of response) {
+                    $('#categoriaGrupo').append(`
+                        <option value="${categoria.id}">${categoria.nombre}</option>
+                    `);
+                }
+            });
+        }
+
+        function cargarMaratones() {
+            var settings = {
+                "url": "http://localhost:8081/maraton",
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                for (const maraton of response) {
+                    $('#maratonGrupo').append(`
+                        <option value="${maraton.id}">${maraton.nombre}</option>
+                    `);
+                }
+            });
+        }
+
+        function cargaCursos() {
+            var settings = {
+                "url": "http://localhost:8081/curso",
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                for (const curso of response) {
+                    $('#cursosEstudiante1').append(`
+                        <option value="${curso.id}">${curso.nombre}</option>
+                    `);
+                    $('#cursosEstudiante2').append(`
+                        <option value="${curso.id}">${curso.nombre}</option>
+                    `);
+                    $('#cursosEstudiante3').append(`
+                        <option value="${curso.id}">${curso.nombre}</option>
+                    `);
+                }
+            });
+        }
+
+        async function crearGrupo(event) {
+            event.preventDefault();
+
+            const nombreGrupo = $('#nombreGrupo').val();
+            const categoria_id = $('#categoriaGrupo').val();
+            const maraton_id = parseInt($('#maratonGrupo').val());
+
+            const nombre1 = $('#nombreEstudiante1').val();
+            const correo1 = $('#correoEstudiante1').val();
+            const carnet1 = $('#carnetEstudiante1').val();
+            const cursos1 = $('#cursosEstudiante1').val().map(e => parseInt(e));
+
+            const nombre2 = $('#nombreEstudiante2').val();
+            const correo2 = $('#correoEstudiante2').val();
+            const carnet2 = $('#carnetEstudiante2').val();
+            const cursos2 = $('#cursosEstudiante2').val().map(e => parseInt(e));
+
+            const nombre3 = $('#nombreEstudiante3').val();
+            const correo3 = $('#correoEstudiante3').val();
+            const carnet3 = $('#carnetEstudiante3').val();
+            const cursos3 = $('#cursosEstudiante3').val().map(e => parseInt(e));
+
+            if (new Set([nombre1, nombre2, nombre3]).size !== 3) {
+                alert('Los nombres de los estudiantes deben ser diferentes');
+                return;
+            }
+
+            if (new Set([correo1, correo2, correo3]).size !== 3) {
+                alert('Los correos de los estudiantes deben ser diferentes');
+                return;
+            }
+
+            let resultado = await existeGrupo(nombreGrupo);
+
+            if (resultado) {
+                alert('El nombre del grupo ya existe. Intente con otro.');
+                return;
+            }
+
+            resultado = await existeUsuario(correo1);
+
+            if (resultado) {
+                alert('El correo del primer estudiante ya existe. Intente con otro.');
+                return;
+            }
+
+            resultado = await existeUsuario(correo2);
+
+            if (resultado) {
+                alert('El correo del segundo estudiante ya existe. Intente con otro.');
+                return;
+            }
+
+            resultado = await existeUsuario(correo3);
+
+            if (resultado) {
+                alert('El correo del tercer estudiante ya existe. Intente con otro.');
+                return;
+            }
+
+            const data = {
+                nombreGrupo,
+                categoria_id,
+                maraton_id,
+                estudiantes: [{
+                    nombre: nombre1,
+                    correo: correo1,
+                    carnet: carnet1,
+                    cursos: cursos1
+                },
+                {
+                    nombre: nombre2,
+                    correo: correo2,
+                    carnet: carnet2,
+                    cursos: cursos2
+                },
+                {
+                    nombre: nombre3,
+                    correo: correo3,
+                    carnet: carnet3,
+                    cursos: cursos3
+                }
+                ]
+            }
+
+            console.log(data);
+
+            var settings = {
+                "url": "http://localhost:8081/grupo/",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify(data),
+            };
+
+            $.ajax(settings).done(function (response) {
+                if (response.mensaje == 'Grupo agregado') {
+                    alert('Grupo creado con éxito');
+                    $('#registroGrupoModal').modal('hide');
+                } else {
+                    alert('Error al crear el grupo. Intente nuevamente.');
+                }
+            });
+        }
+
+        async function existeUsuario(email) {
+            var settings = {
+                "url": "http://localhost:5000/validar_usuario",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({ "email": email }),
+            };
+
+            try {
+                let response = await $.ajax(settings);
+                return response.mensaje == 'El usuario existe';
+            } catch (error) {
+                console.error(error);
+                return false;
+            }
+        }
+
+        async function existeGrupo(grupo) {
+            var settings = {
+                "url": "http://localhost:8081/grupo/existe-grupo?nombre=" + grupo,
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            try {
+                let response = await $.ajax(settings);
+                return response.existe;
+            } catch (error) {
+                console.error(error);
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
