@@ -1,5 +1,5 @@
 ![U](https://github.com/darkelian/Tendencias/blob/main/Assets/Images/ui/U.png)
-# Modelos de programación II
+# Modelos de Programación II
 ## Proyecto Final
 ### Integrantes:
 
@@ -61,3 +61,5 @@ Este proyecto se conforma de 3 subproyectos que son Api de login, Api Database y
 ```bash
   python app.py  
 ```
+## Docs
+[Docs endpoints](https://github.com/darkelian/Modelos-II/blob/main/Docs/Api%20de%20login.pdf)
